@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Signup</h1>
+
+<form action="/signup" method="post">
+    <label style= "display:inline-block; width:110px">
+        Username      
+    </label>
+    <input type="text" name="username" value={{username}}>
+    <label style= color:red;>{{username_error}}</label>
+    <br>
+    <label style= "display:inline-block; width:110px">
+        Password  
+    </label>    
+    <input type="password" name="password">
+    <label style= color:red;>{{password_error}}</label>
+    <br>
+    <label style= "display:inline-block; width:110px">
+        Verify Password
+    </label>
+    <input type="password" name="verify_password">
+    <label style= color:red;>{{verify_password_error}}</label>
+    <br>
+    <label style= "display:inline-block; width:110px">
+        Email (optional)
+    </label>
+    <input type="text" name="email" value={{email}}>
+    <label style= color:red;>{{email_error}}</label>
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+
+{% endblock %}
